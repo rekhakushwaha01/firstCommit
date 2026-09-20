@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-bg-main: #afc5d5;
+  --color-bg-light: #eaf2f6;
+  --color-surface: #f7fbfd;
+  --color-surface-strong: #ffffff;
+  --color-blue-dark: #15354d;
+  --color-blue: #47738f;
+  --color-blue-light: #7ea8be;
+  --color-cyan: #61c7d9;
+  --color-lime: #c4ef3d;
+  --color-text: #15354d;
+  --color-text-muted: #607b8c;
+}
+
+:root {
+  --bg-main: #afc5d5;
+  --bg-light: #eaf2f6;
+  --surface: #f7fbfd;
+  --surface-strong: #ffffff;
+  --blue-dark: #15354d;
+  --blue: #47738f;
+  --blue-light: #7ea8be;
+  --cyan: #61c7d9;
+  --lime: #c4ef3d;
+  --text: #15354d;
+  --text-muted: #607b8c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--cyan) 45%, white);
+  color: var(--blue-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+#qabx-print-report {
+  display: none;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #qabx-print-report,
+  #qabx-print-report * {
+    visibility: visible;
+  }
+
+  #qabx-print-report {
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    background: white;
+    color: #15354d;
+    padding: 24px;
+  }
+
+  #qabx-print-report .wm {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 2px solid #15354d;
+    padding: 12px;
+  }
+}

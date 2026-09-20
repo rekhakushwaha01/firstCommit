@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Q-ABX mark">
+  <rect width="64" height="64" rx="16" fill="#15354D"/>
+  <path d="M16 44 32 16 48 44" stroke="#C4EF3D" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="32" cy="30" r="4.2" fill="#61C7D9"/>
+</svg>
